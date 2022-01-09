@@ -1,4 +1,4 @@
-Description: This project is for the Shopify Backend Developer Intern Challenge - Summer 2022. This is an inventory tracking web application for a logistics company. Specifically, CRUD functionality is implemented as this website can create, edit, delete, and view inventory items. Moreover, the additional feature that was implemented was the feature to push a button that exported product data to a CSV.
+Description: This project is for the Shopify Backend Developer Intern Challenge - Summer 2022. This is an inventory tracking web application for a logistics company. Specifically, CRUD functionality is implemented as this website can create, edit, delete, and view inventory items. Moreover, the additional feature that was implemented was the feature to push a button that exported product data to a CSV file.
 
 
 Website Link: https://shopify-intern-challenge-grant.herokuapp.com/
