@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Shopify</title>
+
+  <style media="screen">
+    .indent{
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+    ul{
+      margin-top: -15px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Shopify Backend Developer Intern Challenge - Summer 2022</h1>
+  <h2>Feature chosen: Push a button export product data to a CSV</h2>
+  <br>
+  <br>
+
+  <h1>List of Products</h1>
+  <br>
+
+  <ul>
+    {% for product in products %}
+      <li>
+        <h2>{{ product.description }}</h2>
+        <ul>
+          <li class = 'indent'>Price = ${{ product.price }}</li>
+          <li class = 'indent'>Quantity = {{ product.quantity }}</li>
+          <li class = 'indent'><a href="{% url 'update_product' product.id %}">Edit Item</a></li>
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <br>
+  <br>
+  <a href="{% url 'create_product' %}">Add Product</a>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <form action="{% url 'export' %}">
+    <input type="submit" value="Export Products as CSV" />
+  </form>
+
+</body>
+
+</html>
